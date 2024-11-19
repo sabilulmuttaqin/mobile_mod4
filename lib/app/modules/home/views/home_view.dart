@@ -4,6 +4,8 @@ import 'package:mod4mobile/app/modules/Camera/controllers/camera_controller.dart
 import 'package:mod4mobile/app/modules/Camera/views/camera.dart';
 import 'package:mod4mobile/app/modules/Camera/views/video.dart';
 import 'package:mod4mobile/app/modules/Camera/views/widget_background.dart';
+import 'package:mod4mobile/app/modules/Microphone/controllers/microphone_controller.dart';
+import 'package:mod4mobile/app/modules/Microphone/views/microphone.dart';
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
@@ -22,7 +24,7 @@ class HomeView extends GetView<HomeController> {
             child: WidgetBackground(),
           ),
           Center(
-            child: Row(
+            child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedButton(
@@ -40,6 +42,14 @@ class HomeView extends GetView<HomeController> {
                     Get.to(() => const VideoView());
                   },
                   child: const Text('Open Video'),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    Get.put(MicrophoneController());
+                    // Navigasi ke VideoView menggunakan Get
+                    Get.to(() => const MicrophoneView());
+                  },
+                  child: const Text('Open Microphone'),
                 ),
               ],
             ),

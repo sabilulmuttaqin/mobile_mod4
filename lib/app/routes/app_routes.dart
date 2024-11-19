@@ -6,6 +6,7 @@ abstract class Routes {
   static const HOME = _Paths.HOME;
   static const CAMERA = _Paths.CAMERA;
   static const VIDEO = _Paths.VIDEO;
+  static const MICROPHONE = _Paths.MICROPHONE;
 }
 
 abstract class _Paths {
@@ -13,4 +14,5 @@ abstract class _Paths {
   static const HOME = '/home';
   static const CAMERA = '/camera';
   static const VIDEO = '/video';
+  static const MICROPHONE = '/microphone';
 }
